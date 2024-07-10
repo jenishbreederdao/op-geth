@@ -50,3 +50,9 @@ profile.cov
 logs/
 
 tests/spec-tests/
+
+datadir
+jwt.txt
+
+.env
+genesis.json

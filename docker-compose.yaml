@@ -1,0 +1,20 @@
+services:
+  op-geth:
+    container_name: op-geth
+    build: .
+    ports:
+      - "8545:8545"
+      - "8546:8546"
+      - "8551:8551"
+    volumes:
+      - ./datadir:/app/datadir
+      - ./jwt.txt:/app/jwt.txt
+      - ./genesis.json:/app/genesis.json
+      - ./scripts/op-geth.sh:/app/op-geth.sh
+    env_file:
+      - .env
+    networks:
+      - op-network
+
+networks:
+  op-network:
