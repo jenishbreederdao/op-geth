@@ -16,8 +16,8 @@
   --ws.api=debug,eth,txpool,net,engine \
   --syncmode=full \
   --gcmode=archive \
-  --nodiscover \
-  --maxpeers=0 \
+  --nodiscover=$NO_DISCOVER \
+  --maxpeers=$MAX_PEERS \
   --networkid=$L2_CHAIN_ID \
   --authrpc.vhosts="*" \
   --authrpc.addr=0.0.0.0 \
